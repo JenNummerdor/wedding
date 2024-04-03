@@ -1,4 +1,4 @@
-import {Card, CardBody, CardHeader} from "@nextui-org/react";
+import {Card, CardBody} from "@nextui-org/react";
 
 type Props = {
   name: string;
@@ -9,11 +9,11 @@ type Props = {
 
 export function Event({ name, location = "Whispering Oaks Ranch", start, end }: Props) {
   return (
-    <Card shadow="none">
-      <CardHeader>{name}</CardHeader>
-      <CardBody>
-        <p>{start} - {end}</p>
-        <p>{location}</p>
+    <Card shadow="none" id="event-card">
+      <CardBody className=" flex items-center">
+        <p className="text-xl italic">{name}</p>
+        <p className="text-base">{start} - {end}</p>
+        <p className="text-base">{location}</p>
       </CardBody>
     </Card>
   )
