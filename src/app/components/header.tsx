@@ -1,6 +1,6 @@
 'use client';
-import Link from 'next/link';
 import {
+  Link,
   Navbar,
   NavbarBrand,
   NavbarContent,
@@ -11,57 +11,59 @@ import {
 } from '@nextui-org/react';
 import { useState } from 'react';
 
+const menu = [
+  {
+    href: '/rsvp',
+    title: 'RSVP',
+  },
+  {
+    href: '/schedule',
+    title: 'Schedule',
+  },
+  {
+    href: '/travel',
+    title: 'Travel & Stay'
+  },
+  {
+    href: '/registry',
+    title: 'Registry'
+  }
+];
+
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <Navbar onMenuOpenChange={setIsMenuOpen}>
+      {/* Toggle Menu for  mobile devices */}
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
           className='sm:hidden'
         />
         <NavbarBrand>
-          <Link href='/'>💍 J+O</Link>
+          <Link href='/' color="foreground"><p className="font-bold text-inherit">💍 J+O</p></Link>
         </NavbarBrand>
       </NavbarContent>
-
+      {/* Menu Content for large devices */}
       <NavbarContent className='hidden sm:flex gap-4' justify='end'>
-        <NavbarItem>
-          <Link href='/rsvp'>RSVP</Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link href='/schedule'>Schedule</Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link href='/travel'>Travel & Stay</Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link href='/registry'>Registry</Link>
-        </NavbarItem>
+        {
+          menu.map((item, idx) => (
+            <NavbarItem key={`${item.title}-${idx}`}>
+              <Link href={item.href} size="lg" color="foreground">{item.title}</Link>
+            </NavbarItem>
+          ))
+        }
       </NavbarContent>
-
+      {/* Menu Content for small devices */}
       <NavbarMenu>
-        <NavbarMenuItem>
-          <Link href='/rsvp' className='w-full'>
-            RSVP
-          </Link>
-        </NavbarMenuItem>
-        <NavbarMenuItem>
-          <Link href='/schedule' className='w-full'>
-            Schedule
-          </Link>
-        </NavbarMenuItem>
-        <NavbarMenuItem>
-          <Link href='/travel' className='w-full'>
-            Travel
-          </Link>
-        </NavbarMenuItem>
-        <NavbarMenuItem>
-          <Link href='/registry' className='w-full'>
-            Registry
-          </Link>
-        </NavbarMenuItem>
+        {
+          menu.map((item, idx) => (
+            <NavbarMenuItem key={`${item.title}-${idx}`}>
+              <Link href={item.href} className= 'w-full' size="lg" color="foreground">{item.title}</Link>
+            </NavbarMenuItem>
+          ))
+        }
       </NavbarMenu>
     </Navbar>
   );
