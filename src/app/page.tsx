@@ -4,14 +4,23 @@ import {Hero} from "@/app/components/hero";
 export default function Home() {
   return (
     <main className={styles.main}>
-      <Hero />
+      <Hero/>
       <div className="flex flex-col items-center gap-y-2 py-10">
         <h1 className="uppercase text-xl">Our Story</h1>
         <p className="text-base text-center">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Diam maecenas sed enim ut sem viverra aliquet. Tristique senectus et netus et malesuada fames. Nunc lobortis mattis aliquam faucibus purus in massa tempor. Fermentum et sollicitudin ac orci phasellus. Amet luctus venenatis lectus magna fringilla urna porttitor rhoncus dolor. Euismod quis viverra nibh cras. Iaculis eu non diam phasellus vestibulum lorem. Maecenas ultricies mi eget mauris. Amet nisl suscipit adipiscing bibendum. Euismod quis viverra nibh cras. Fames ac turpis egestas maecenas pharetra convallis posuere morbi. Blandit turpis cursus in hac. Leo integer malesuada nunc vel risus commodo. Id eu nisl nunc mi ipsum faucibus vitae.
+          Jen and Oscar met in 2016 playing in the mountains of Colorado after being introduced by their mutual friend
+          Vivian. Very soon after meeting the three of them began planning their first adventure into Utah.
+          Serendipitously, Jen and Oscar were put in charge of driving the first day and what should have been a short
+          drive turned into an all night affair after Oscar missed his exit by several hours lost in
+          conversation with Jen. One trip, turned into many and days became years...
         </p>
         <p className="text-base text-center">
-          Imperdiet nulla malesuada pellentesque elit eget gravida cum sociis. Lectus arcu bibendum at varius vel. Eget nullam non nisi est sit amet facilisis magna etiam. Pellentesque id nibh tortor id aliquet. Integer quis auctor elit sed vulputate mi sit. Elementum pulvinar etiam non quam.
+          These days their lives are a little [] but the family and friends who support them have grown by the many with
+          them. You can still find all of them playing in the mountains; and most importantly Jen and Oscar will still
+          occasionally miss their exit.
+        </p>
+        <p className="text-base text-center">
+          They are so excited for you to join them in this beautiful state they call home and cannot wait to celebrate with you in August!
         </p>
       </div>
     </main>
