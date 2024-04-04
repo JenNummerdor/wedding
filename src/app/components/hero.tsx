@@ -3,7 +3,7 @@ import hero from "public/hero.jpg";
 import {Card, CardFooter, CardHeader} from "@nextui-org/react";
 export function Hero() {
   return (
-    <Card shadow="lg" radius="lg" className="max-w-5xl">
+    <Card shadow="lg" radius="lg" className="max-w-4xl">
       <CardHeader className="absolute z-10 top-1 items-center">
         <div className="flex flex-col items-center mx-auto">
           <p className="text-black text-4xl font-semibold">
