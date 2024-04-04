@@ -15,12 +15,13 @@ export default function Home() {
           conversation with Jen. One trip, turned into many and days became years...
         </p>
         <p className="text-base text-center">
-          These days their lives are a little [] but the family and friends who support them have grown by the many with
+          These days their lives are a little busier and a little richer with the growing family and friends who support
           them. You can still find all of them playing in the mountains; and most importantly Jen and Oscar will still
           occasionally miss their exit.
         </p>
         <p className="text-base text-center">
-          They are so excited for you to join them in this beautiful state they call home and cannot wait to celebrate with you in August!
+          They are so excited for you to join them in this beautiful state they call home and cannot wait to celebrate
+          with you in August!
         </p>
       </div>
     </main>
