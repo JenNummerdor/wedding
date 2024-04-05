@@ -1,9 +1,8 @@
-import styles from "./page.module.css";
 import {Hero} from "@/app/components/hero";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
+    <>
       <Hero/>
       <div className="py-10" id="story-container">
         <div className="flex flex-col items-center max-w-5xl gap-y-4">
@@ -27,6 +26,6 @@ export default function Home() {
           </p>
         </div>
       </div>
-    </main>
+    </>
   );
 }
