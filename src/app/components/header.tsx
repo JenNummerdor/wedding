@@ -34,7 +34,7 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen} className="bg-eucalyptus-400 text-foreground-paprika">
+    <Navbar onMenuOpenChange={setIsMenuOpen} className="bg-eucalyptus-300">
       {/* Toggle Menu for  mobile devices */}
       <NavbarContent>
         <NavbarMenuToggle
@@ -42,7 +42,7 @@ export function Header() {
           className='sm:hidden'
         />
         <NavbarBrand>
-          <Link href='/' color="foreground"><p className="font-bold text-inherit">💍 J+O</p></Link>
+          <Link href='/' color="foreground"><p className="text-lg font-bold text-inherit">💍 J+O</p></Link>
         </NavbarBrand>
       </NavbarContent>
       {/* Menu Content for large devices */}
@@ -50,7 +50,7 @@ export function Header() {
         {
           menu.map((item, idx) => (
             <NavbarItem key={`${item.title}-${idx}`}>
-              <Link href={item.href} size="lg" color="foreground">{item.title}</Link>
+              <Link href={item.href} size="lg" color="foreground" className="uppercase">{item.title}</Link>
             </NavbarItem>
           ))
         }

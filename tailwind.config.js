@@ -3,6 +3,7 @@ import {nextui} from "@nextui-org/react";
 const palette = {
   eucalyptus: {
     DEFAULT: "#4F5B53",
+    50: "#f6f7f6",
     100: "#e2e5e3",
     200: "#c4cbc6",
     300: "#9eaaa1",
@@ -106,9 +107,9 @@ module.exports = {
           extend: 'light',
           colors: {
             /* Set page text color */
-            foreground: palette.paprika["900"],
+            foreground: palette.terracotta["900"],
             /* Set page background color */
-            background: palette.eucalyptus["100"],
+            background: palette.eucalyptus["50"],
             /* Set layout divider color */
             divider: palette.paprika,
             /* Set layout fous color */
