@@ -7,7 +7,7 @@ export default function Home() {
         <Hero />
         <div className="flex flex-col items-center my-12 font-serif">
           <p className="text-2xl">Come celebrate with us</p>
-          <time dateTime="2024-08-17" className="text-4xl font-semibold">August 17, 2024</time>
+          <time dateTime="2024-08-17" className="text-4xl font-semibold uppercase">August 17, 2024</time>
         </div>
       </div>
       <div className="py-10 w-full bg-eucalyptus-300" id="story-container">

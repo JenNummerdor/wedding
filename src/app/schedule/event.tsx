@@ -9,7 +9,7 @@ type Props = {
 
 export function Event({ name, location = "Whispering Oaks Ranch", start, end }: Props) {
   return (
-    <Card shadow="none" id="event-card" className="w-72 border-l-4 border-burgundy bg-burgundy-200">
+    <Card shadow="none" id="event-card" className="w-72 border-l-8 border-burgundy bg-burgundy-200">
       <CardBody className="items-center">
         <p className="text-xl italic">{name}</p>
         <p className="text-base">{start} - {end}</p>
