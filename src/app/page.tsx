@@ -3,9 +3,9 @@ import {Hero} from "@/app/components/hero";
 export default function Home() {
   return (
     <>
-      <Hero/>
-      <div className="py-10" id="story-container">
-        <div className="flex flex-col items-center max-w-5xl gap-y-4">
+      <Hero />
+      <div className="py-10 w-full bg-eucalyptus-400" id="story-container">
+        <div className="flex flex-col items-center max-w-5xl gap-y-4 mx-auto">
           <h1 className="uppercase text-xl">Our Story</h1>
           <p className="text-base text-center">
             Jen and Oscar met in 2016 playing in the mountains of Colorado after being introduced by their mutual friend

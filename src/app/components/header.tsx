@@ -34,7 +34,7 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen}>
+    <Navbar onMenuOpenChange={setIsMenuOpen} className="bg-eucalyptus-400 text-foreground-paprika">
       {/* Toggle Menu for  mobile devices */}
       <NavbarContent>
         <NavbarMenuToggle
