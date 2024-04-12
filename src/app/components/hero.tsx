@@ -1,21 +1,25 @@
-import Image from "next/image";
-import hero from "public/hero.jpg";
-import {Card, CardBody, CardFooter} from "@nextui-org/react";
+import Image from 'next/image';
+import hero from 'public/hero.jpg';
+import { Card, CardBody, CardFooter } from '@nextui-org/react';
+
 export function Hero() {
   return (
-    <Card shadow="lg" radius="none" className="max-w-4xl mb-12">
+    <Card shadow='lg' radius='none' className='max-w-4xl'>
       <CardBody>
-        <Image src={hero} alt="Jen and Oscar in Florence" style={{ width: '100%', height: '100%' }} />
+        <Image
+          src={hero}
+          alt='Jen and Oscar in Florence'
+          style={{ width: '100%', height: '100%' }}
+        />
       </CardBody>
-      <CardFooter className="absolute z-10 inset-x-3 bottom-3">
-        <div className="text-cedar-rose-100 text-4xl font-semibold">
-          <p className="">
-            Jen&nbsp;<span className="italic text-sm">and</span>&nbsp;Oscar
+      <CardFooter className='z-10 absolute flex justify-center p-4 mt-4 md:mt-8 overflow-visible'>
+        <div className='text-burgundy-900 text-4xl'>
+          <p className='font-invitation md:text-8xl sm:text-5xl'>
+            Jen&nbsp;<span className='md:-ml-4 sm:-ml-2'>+</span>
+            &nbsp;Oscar
           </p>
-          <p className="text-cedar-rose-300">are getting</p>
-          <p className="">married.</p>
         </div>
       </CardFooter>
     </Card>
-  )
+  );
 }
