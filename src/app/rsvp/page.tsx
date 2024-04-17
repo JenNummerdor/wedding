@@ -8,15 +8,6 @@ const GOOGLE_FORM_URL_LINK =
 export default function Page() {
   return (
     <Container title='RSVP'>
-      {/* <div className='bg-secondary-100 p-8 rounded-xl'>
-        <iframe
-          src='https://docs.google.com/forms/d/e/1FAIpQLSd45lFU14koCSxV5mkTyXEmqLukAiIXPImPHUriYLXCUkEtBw/viewform?embedded=true'
-          width='650'
-          height='660'
-        >
-          Loading…
-        </iframe>
-      </div> */}
       <div className='m-8 mt-2 flex items-center flex-col text-justify '>
         <p className='text-base sm:text-lg md:text-xl lg:text-2xl'>
           Please RSVP by May 1, 2024.
