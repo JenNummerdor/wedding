@@ -13,6 +13,10 @@ import { useState } from 'react';
 
 const menu = [
   {
+    href: '/',
+    title: 'Home'
+  },
+  {
     href: '/rsvp',
     title: 'RSVP',
   },
