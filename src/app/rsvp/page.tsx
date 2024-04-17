@@ -20,7 +20,7 @@ export default function Page() {
             Click Here
           </button>
         </a>
-        <p className='text-base sm:text-lg md:text-xl lg:text-2xl'>
+        <p className='text-base sm:text-md md:text-lg lg:text-xl'>
           Please RSVP by May 1, 2024.
         </p>
         <Image
