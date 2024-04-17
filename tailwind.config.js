@@ -102,7 +102,7 @@ module.exports = {
           extend: 'light',
           colors: {
             /* Set page text color */
-            foreground: palette.text['800'],
+            foreground: palette.text['900'],
             /* Set page background color */
             background: palette.background['950'],
             /* Set layout divider color */

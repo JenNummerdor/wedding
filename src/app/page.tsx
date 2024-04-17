@@ -11,7 +11,7 @@ export default function Home() {
           </p>
           <time
             dateTime='2024-08-17'
-            className='font-semibold uppercase text-2xl lg:text-4xl text-accent-600'
+            className='font-semibold uppercase text-2xl lg:text-4xl text-secondary-500'
           >
             August 17, 2024
           </time>

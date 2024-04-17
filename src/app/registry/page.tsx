@@ -1,9 +1,9 @@
-import {Container} from "@/app/components/container";
+import { Container } from '@/app/components/container';
 
 export default function Page() {
   return (
-    <Container title="Registry">
-      <p>This is the registry page!</p>
+    <Container title='Registry'>
+      <p>Coming Soon!</p>
     </Container>
-  )
+  );
 }
