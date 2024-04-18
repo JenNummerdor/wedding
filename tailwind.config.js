@@ -107,7 +107,7 @@ module.exports = {
             background: palette.background['950'],
             /* Set layout divider color */
             divider: palette.primary['500'],
-            /* Set layout fous color */
+            /* Set layout focus color */
             focus: palette.accent['900'],
             /* Set values for NextUI "Semantic Colors" */
             primary: {},

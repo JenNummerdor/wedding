@@ -9,7 +9,8 @@ import {
   NavbarMenu,
   NavbarMenuItem,
 } from '@nextui-org/react';
-import { useState } from 'react';
+import {useEffect, useState} from 'react';
+import { usePathname } from "next/navigation";
 
 const menu = [
   {
@@ -36,9 +37,12 @@ const menu = [
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  useEffect(() => setIsMenuOpen(false), [pathname]);
 
   return (
-    <Navbar isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen} className=''>
+    <Navbar isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen}>
       {/* Toggle Menu for  mobile devices */}
       <NavbarContent>
         <NavbarMenuToggle
@@ -75,7 +79,6 @@ export function Header() {
               className='w-full'
               size='lg'
               color='foreground'
-              onPress={() => setIsMenuOpen(false)}
             >
               {item.title}
             </Link>
