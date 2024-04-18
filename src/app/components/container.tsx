@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import hero from 'public/floral-divider.png';
+import floralDivider from 'public/floral-divider.png';
 
 type Props = {
   title: string;
@@ -17,9 +17,9 @@ export function Container({ title, children }: Props) {
               {title}
             </h1>
             <Image
-              src={hero}
-              alt='Jen and Oscar in Florence'
-              className='w-1/2 md:w-1/4 m-auto'
+              src={floralDivider}
+              alt='floral divider'
+              className='w-1/3 md:w-1/4 m-auto'
             />
           </div>
           {children}
