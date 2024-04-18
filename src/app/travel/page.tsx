@@ -13,22 +13,19 @@ export default function Page() {
           Getting Here
         </h1>
         <div className='p-4 rounded-xl col-span-2 md:col-span-1'>
-          <p>
-            If you&apos;re flying in, you have three options:
-            <ol>
-              <li>1.) Salt Lake City International Airport (SLC)</li>
-              <li>2.) Grand Junction Regional Airport (GJT) </li>
-              <li>3.) Canyonlands Field Regional Airport (CNY)</li>
-            </ol>
-            The SLC airport will likely be the cheapest option, but it is the
-            furthest away from the wedding venue. However, this is the airport
-            we live closest to, so it could be an easier option to coordinate
-            carpooling and such. The Grand Junction airport is the middle ground
-            and is a good mix of price and time. The Canyonlands Airport will
-            likely be the most expensive option depending on where you are
-            flying from. However, it is the most convenient airport in terms of
-            time.
-          </p>
+          If you&apos;re flying in, you have three options:
+          <ol>
+            <li>1.) Salt Lake City International Airport (SLC)</li>
+            <li>2.) Grand Junction Regional Airport (GJT) </li>
+            <li>3.) Canyonlands Field Regional Airport (CNY)</li>
+          </ol>
+          The SLC airport will likely be the cheapest option, but it is the
+          furthest away from the wedding venue. However, this is the airport we
+          live closest to, so it could be an easier option to coordinate
+          carpooling and such. The Grand Junction airport is the middle ground
+          and is a good mix of price and time. The Canyonlands Airport will
+          likely be the most expensive option depending on where you are flying
+          from. However, it is the most convenient airport in terms of time.
         </div>
         <div className='p-4 rounded-xl col-span-2 md:col-span-1'>
           <Image
