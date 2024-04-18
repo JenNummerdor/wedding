@@ -15,9 +15,9 @@ export default function Page() {
         <div className='p-4 rounded-xl col-span-2 md:col-span-1'>
           If you&apos;re flying in, you have three options:
           <ol>
-            <li>1.) Salt Lake City International Airport (SLC)</li>
-            <li>2.) Grand Junction Regional Airport (GJT) </li>
-            <li>3.) Canyonlands Field Regional Airport (CNY)</li>
+            <li>1. Salt Lake City International Airport (SLC)</li>
+            <li>2. Grand Junction Regional Airport (GJT) </li>
+            <li>3. Canyonlands Field Regional Airport (CNY)</li>
           </ol>
           The SLC airport will likely be the cheapest option, but it is the
           furthest away from the wedding venue. However, this is the airport we
