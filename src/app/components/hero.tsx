@@ -7,6 +7,7 @@ export function Hero() {
     <Card shadow='lg' radius='none' className='max-w-4xl mt-6'>
       <CardBody>
         <Image
+          priority
           src={hero}
           alt='Jen and Oscar in Florence'
           style={{ width: '100%', height: '100%' }}
