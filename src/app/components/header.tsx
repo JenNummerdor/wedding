@@ -38,7 +38,7 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <Navbar isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen} className=''>
+    <Navbar isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen}>
       {/* Toggle Menu for  mobile devices */}
       <NavbarContent>
         <NavbarMenuToggle
@@ -75,7 +75,7 @@ export function Header() {
               className='w-full'
               size='lg'
               color='foreground'
-              onPress={() => setIsMenuOpen(false)}
+              onPress={_ => setIsMenuOpen(false)}
             >
               {item.title}
             </Link>

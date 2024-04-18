@@ -6,7 +6,7 @@ import {PropertyMap} from "@/app/schedule/property-map";
 export default function Page() {
   return (
     <Container title="Schedule">
-      <div className="flex items-center">
+      <div className="flex flex-col sm:flex-row items-center">
         <PropertyMap/>
         <div id="schedule" className="">
           <Day day="Friday" date={16}>
