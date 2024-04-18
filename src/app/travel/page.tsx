@@ -1,6 +1,6 @@
 import { Container } from '@/app/components/container';
 import Image from 'next/image';
-import airports from 'public/airports.jpg';
+import airportsTwo from 'public/Two2.jpg';
 import whisperingOaks from 'public/whispering-oaks.jpeg';
 import fairfieldHotel from 'public/fairfield-hotel.png';
 import { Divider } from '@nextui-org/react';
@@ -30,7 +30,7 @@ export default function Page() {
         <div className='p-4 rounded-xl col-span-2 md:col-span-1'>
           <Image
             className='rounded-xl'
-            src={airports}
+            src={airportsTwo}
             alt='map of airports near Moab'
             style={{ width: '100%', height: 'auto' }}
           />
