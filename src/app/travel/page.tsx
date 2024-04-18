@@ -1,6 +1,6 @@
 import { Container } from '@/app/components/container';
 import Image from 'next/image';
-import airportsTwo from 'public/Two2.jpg';
+import airportsTwo from 'public/airports2.jpg';
 import whisperingOaks from 'public/whispering-oaks.jpeg';
 import fairfieldHotel from 'public/fairfield-hotel.png';
 import { Divider } from '@nextui-org/react';
