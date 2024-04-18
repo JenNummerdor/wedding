@@ -7,10 +7,12 @@ export default function Page() {
   return (
     <Container title="Schedule">
       <div className="flex flex-col sm:flex-row items-center">
-        <PropertyMap/>
-        <div id="schedule" className="">
+        <div className="flex-1">
+          <PropertyMap/>
+        </div>
+        <div id="schedule" className="flex-1">
           <Day day="Friday" date={16}>
-            <Event name="Rehearsal Dinner" location="Cedar Bend Cabin" start="6 PM" end="7:30 PM"/>
+            <Event name="Rehearsal Dinner" location="Cedar Bend Cabin" start="6 PM" end="7:30 PM" />
           </Day>
 
           <Day day="Saturday" date={17}>
