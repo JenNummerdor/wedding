@@ -6,12 +6,12 @@ export default function Home() {
       <div id='hero-container'>
         <Hero />
         <div className='flex flex-col items-center py-5 my-8 lg:my-12 font-serif'>
-          <p className='text-md lg:text-2xl '>
-            Come celebrate our wedding with us
+          <p className='my-0 lg:my-2 font-invitation text-3xl lg:text-5xl'>
+            Celebrate our wedding with us
           </p>
           <time
             dateTime='2024-08-17'
-            className='font-semibold uppercase text-2xl lg:text-4xl text-secondary-500'
+            className='my-0 lg:my-2 font-semibold uppercase text-2xl lg:text-4xl text-accent-600'
           >
             August 17, 2024
           </time>
@@ -19,7 +19,7 @@ export default function Home() {
       </div>
       <div className='py-10 w-full bg-primary-300' id='story-container'>
         <div className='flex flex-col items-center max-w-5xl gap-y-4 mx-auto mt-6 font-serif '>
-          <h1 className='uppercase text-lg lg:text-4xl'>Our Story</h1>
+          <h1 className='font-semi uppercase text-xl lg:text-3xl'>Our Story</h1>
           <p className='text-center italic p-4 text-sm sm:text-base md:text-xl'>
             Jen and Oscar met in 2016 playing in the mountains of Colorado after
             being introduced by their mutual friend Vivian. Very soon after
