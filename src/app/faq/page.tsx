@@ -15,9 +15,10 @@ export default function Page() {
             In the summertime, Moab tends to experience high temperatures,
             typically ranging in the mid to high 90s. Fortunately, our wedding
             venue in the La Sal Mountains sits at an elevation of approximately
-            8,000 feet, offering cooler temperatures, ideally in the 80s. Given
-            the dry climate, we recommend staying hydrated by drinking plenty of
-            water and applying sunscreen regularly.
+            8,000 feet, offering cooler temperatures, with highs in the 80s and
+            lows in the 50&apos;. Bring a jacket for the evening! Given the dry
+            climate, we recommend staying hydrated by drinking plenty of water
+            and applying sunscreen regularly.
           </div>
         </AccordionItem>
         <AccordionItem
@@ -26,11 +27,11 @@ export default function Page() {
           title='Am I allowed to bring a plus one?'
         >
           <div className='text-sm'>
-            Right now, no, unless you have already received explit permission.
-            The plus one policy is in place to ensure that we can provide a
-            fantastic night for everyone due to space/cost limitations. We are
-            open to loosening this policy once we have a better idea of the RSVP
-            count. Please reach out to us directly if you have any questions.
+            Right now, no, unless you have received explit permission. The plus
+            one policy is in place to ensure that we can provide a fantastic
+            night for everyone due to space/cost limitations. We are open to
+            loosening this policy once we have a better idea of the RSVP count.
+            Please reach out to us directly if you have any questions.
           </div>
         </AccordionItem>
         <AccordionItem
@@ -39,9 +40,9 @@ export default function Page() {
           title='What is the pet policy?'
         >
           <div className='text-sm'>
-            While we adore our furry friends, Whispering Oaks has a very strict
-            no pets policy. Holly, our dog, will be joining us as the ring
-            bearer, after receiving pre-authorization. Thank you for
+            Unfortunately, Whispering Oaks has a very strict no pets policy.
+            Holly, our dog, will be joining us as the ring bearer, after
+            receiving pre-authorization from the owners. Thank you for
             understanding!
           </div>
         </AccordionItem>
@@ -64,8 +65,8 @@ export default function Page() {
           title='What should I bring?'
         >
           <div className='text-sm'>
-            Bring bug spray, an extra jacket, sunscreen, a bathing suit, and
-            good dancing shoes!
+            Don&apos;t forget bug spray, an extra jacket, sunscreen, a bathing
+            suit, and good dancing shoes!
           </div>
         </AccordionItem>
         <AccordionItem
@@ -88,22 +89,32 @@ export default function Page() {
         >
           <div className='text-sm'>
             This wedding will be an eclectic mix of friends old and new, and
-            family from all over the country. The general vibe will be relaxed
-            and fun. We will be at the ranch from Friday to Sunday, so there
-            will be plenty of time to catch up with old friends and make new
-            ones. You never know who you might meet!
+            family from all over the US & Mexico. The general vibe will be
+            relaxed and fun. We will be at the ranch from Friday to Sunday, so
+            there will be plenty of time to catch up with old friends and make
+            new ones. You never know who you might meet!
           </div>
         </AccordionItem>
         <AccordionItem
           key='8'
-          aria-label='Will there be a bar?'
-          title='Will there be a bar?'
+          aria-label='Will there be alcohol?'
+          title='Will there be alcohol?'
         >
           <div className='text-sm'>
             Utah is one of the strictest states in the nation when it comes to
-            liquor laws. Fortunately, Whispering Oaks Ranch is considered
-            private property! We will be providing beer, wine, and a signature
-            cocktail (or two) for the night.
+            liquor laws. Fortunately, this wedding venue is considered private
+            property! We will be providing beer, wine, and a signature cocktail
+            (or two) for the night.
+          </div>
+        </AccordionItem>
+        <AccordionItem
+          key='9'
+          aria-label='Are kids welcome?'
+          title='Are kids welcome?'
+        >
+          <div className='text-sm'>
+            Absolutely! Please make sure to include them in the RSVP.
+            There&apos;s even a small playground on site.
           </div>
         </AccordionItem>
       </Accordion>
