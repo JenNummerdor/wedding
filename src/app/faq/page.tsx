@@ -78,21 +78,24 @@ export default function Page() {
             Due to cost considerations, we will likely not have a shuttle from
             the airports. We are working to coordinate carpools and will provide
             more information as the date approaches. We will be providing
-            shuttles to and from the Fairfield Hotel in Moab at the end of the
-            night on Saturday for those staying in the hotel.
+            limited shuttles to and from the Fairfield Hotel in Moab at the end
+            of the night on Saturday for those staying in the hotel.
           </div>
         </AccordionItem>
         <AccordionItem
           key='7'
-          aria-label='What is the general vibe?'
-          title='What is the general vibe?'
+          aria-label='What will the atmosphere be?'
+          title='What will the atmosphere be?'
         >
           <div className='text-sm'>
+            Thin! We&apos;re getting married in the mountains!
+            <br />
+            <br />
             This wedding will be an eclectic mix of friends old and new, and
-            family from all over the US & Mexico. The general vibe will be
-            relaxed and fun. We will be at the ranch from Friday to Sunday, so
-            there will be plenty of time to catch up with old friends and make
-            new ones. You never know who you might meet!
+            family from all over. This will be relaxed, fun and maybe slightly
+            silly. We will be at the ranch from Friday to Sunday, so there will
+            be plenty of time to catch up with old friends and make new ones.
+            You never know who you might meet!
           </div>
         </AccordionItem>
         <AccordionItem
@@ -113,8 +116,9 @@ export default function Page() {
           title='Are kids welcome?'
         >
           <div className='text-sm'>
-            Absolutely! Please make sure to include them in the RSVP.
-            There&apos;s even a small playground on site.
+            Absolutely! Kids under 18 who are living with you are welcome.
+            Please make sure to include them in the RSVP. There&apos;s even a
+            small playground on site.
           </div>
         </AccordionItem>
       </Accordion>
