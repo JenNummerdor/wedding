@@ -8,21 +8,6 @@ export default function Page() {
       <Accordion variant='shadow'>
         <AccordionItem
           key='1'
-          aria-label='What will the weather be like?'
-          title='What will the weather be like?'
-        >
-          <div className='text-sm'>
-            In the summertime, Moab tends to experience high temperatures,
-            typically ranging in the mid to high 90s. Fortunately, our wedding
-            venue in the La Sal Mountains sits at an elevation of approximately
-            8,000 feet, offering cooler temperatures, with highs in the 80s and
-            lows in the 50&apos;. Bring a jacket for the evening! Given the dry
-            climate, we recommend staying hydrated by drinking plenty of water
-            and applying sunscreen regularly.
-          </div>
-        </AccordionItem>
-        <AccordionItem
-          key='2'
           aria-label='Am I allowed to bring a plus one?'
           title='Am I allowed to bring a plus one?'
         >
@@ -32,6 +17,17 @@ export default function Page() {
             night for everyone due to space/cost limitations. We are open to
             loosening this policy once we have a better idea of the RSVP count.
             Please reach out to us directly if you have any questions.
+          </div>
+        </AccordionItem>
+        <AccordionItem
+          key='2'
+          aria-label='Are kids welcome?'
+          title='Are kids welcome?'
+        >
+          <div className='text-sm'>
+            Absolutely! Kids under 18 who are living with you are welcome.
+            Please make sure to include them in the RSVP. There&apos;s even a
+            small playground on site.
           </div>
         </AccordionItem>
         <AccordionItem
@@ -46,9 +42,23 @@ export default function Page() {
             understanding!
           </div>
         </AccordionItem>
-
         <AccordionItem
           key='4'
+          aria-label='What will the weather be like?'
+          title='What will the weather be like?'
+        >
+          <div className='text-sm'>
+            In the summertime, Moab tends to experience high temperatures,
+            typically ranging in the mid to high 90s. Fortunately, our wedding
+            venue in the La Sal Mountains sits at an elevation of approximately
+            8,000 feet, offering cooler temperatures, with highs in the 80s and
+            lows in the 50&apos;. Bring a jacket for the evening! Given the dry
+            climate, we recommend staying hydrated by drinking plenty of water
+            and applying sunscreen regularly.
+          </div>
+        </AccordionItem>
+        <AccordionItem
+          key='5'
           aria-label='What is the dress code?'
           title='What is the dress code?'
         >
@@ -60,7 +70,7 @@ export default function Page() {
           </div>
         </AccordionItem>
         <AccordionItem
-          key='5'
+          key='6'
           aria-label='What should I bring?'
           title='What should I bring?'
         >
@@ -70,7 +80,7 @@ export default function Page() {
           </div>
         </AccordionItem>
         <AccordionItem
-          key='6'
+          key='7'
           aria-label='Is there a shuttle?'
           title='Is there a shuttle?'
         >
@@ -83,7 +93,7 @@ export default function Page() {
           </div>
         </AccordionItem>
         <AccordionItem
-          key='7'
+          key='8'
           aria-label='What will the atmosphere be?'
           title='What will the atmosphere be?'
         >
@@ -99,7 +109,7 @@ export default function Page() {
           </div>
         </AccordionItem>
         <AccordionItem
-          key='8'
+          key='9'
           aria-label='Will there be alcohol?'
           title='Will there be alcohol?'
         >
@@ -108,17 +118,6 @@ export default function Page() {
             liquor laws. Fortunately, this wedding venue is considered private
             property! We will be providing beer, wine, and a signature cocktail
             (or two) for the night.
-          </div>
-        </AccordionItem>
-        <AccordionItem
-          key='9'
-          aria-label='Are kids welcome?'
-          title='Are kids welcome?'
-        >
-          <div className='text-sm'>
-            Absolutely! Kids under 18 who are living with you are welcome.
-            Please make sure to include them in the RSVP. There&apos;s even a
-            small playground on site.
           </div>
         </AccordionItem>
       </Accordion>
