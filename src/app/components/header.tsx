@@ -9,14 +9,10 @@ import {
   NavbarMenu,
   NavbarMenuItem,
 } from '@nextui-org/react';
-import {useEffect, useState} from 'react';
-import { usePathname } from "next/navigation";
+import { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
 
 const menu = [
-  {
-    href: '/',
-    title: 'Home'
-  },
   {
     href: '/rsvp',
     title: 'RSVP',
@@ -32,6 +28,10 @@ const menu = [
   {
     href: '/registry',
     title: 'Registry',
+  },
+  {
+    href: '/faq',
+    title: 'FAQ',
   },
 ];
 
