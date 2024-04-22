@@ -3,12 +3,13 @@ import Image from 'next/image';
 import airportsTwo from 'public/airports2.jpg';
 import whisperingOaks from 'public/whispering-oaks.jpeg';
 import fairfieldHotel from 'public/fairfield-hotel.png';
+import arch from 'public/arch.png';
 import { Divider } from '@nextui-org/react';
 
 export default function Page() {
   return (
     <Container title='Travel'>
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-4 rounded-xl m-4 font-serif'>
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-4 rounded-xl m-4 font-serif text-justify md:text-lg'>
         <h1 className='col-span-2 text-center font-sans text-2xl'>
           Getting Here
         </h1>
@@ -19,6 +20,7 @@ export default function Page() {
             <li>2. Grand Junction Regional Airport (GJT) </li>
             <li>3. Canyonlands Field Regional Airport (CNY)</li>
           </ol>
+          <br />
           The SLC airport will likely be the cheapest option, but it is the
           furthest away from the wedding venue. However, this is the airport we
           live closest to, so it could be an easier option to coordinate
@@ -54,7 +56,15 @@ export default function Page() {
             This wedding is taking place on a ranch in the La Sal Mountains in
             Moab at the Whispering Oaks Ranch. Conveniently, there are some
             cabins on site in walking distance of the pavillion. Due to limited
-            availability, we will be assigning cabins to guests.
+            availability, we will be assigning cabins to guests. Click{' '}
+            <a
+              href='https://www.whisperingoakslodging.com'
+              className='text-secondary-400 cursor-pointer font-bold'
+            >
+              {' '}
+              here{' '}
+            </a>
+            to go to the Whispering Oaks official website.
           </p>
         </div>
 
@@ -80,11 +90,35 @@ export default function Page() {
             style={{ width: '100%', height: 'auto' }}
           />
         </div>
+
         <Divider className='my-4 col-span-2 ' />
-        <div className='p-4 col-span-2 text-center'>
-          The information on this page is preliminary and we will be updating
-          this page with more information. If you have any questions, please
-          reach out to us.
+
+        <h1 className='col-span-2 text-center font-sans text-2xl'>
+          Things to Do
+        </h1>
+        <div className='p-4 rounded-xl col-span-2 md:col-span-1'>
+          <Image
+            className='rounded-xl'
+            src={arch}
+            alt='great-arch'
+            style={{ width: '100%', height: 'auto' }}
+          />
+        </div>
+        <div className='p-4 rounded-xl col-span-2 md:col-span-1'>
+          <p>
+            Moab is a beautiful place with a lot of outdoor activities such as
+            climbing, hiking, mountain biking, and off-roading. There are also a
+            lot of beautiful arches and canyons to explore. We definitely
+            recommend planning some extra time to explore the area if your
+            schedule allows! Click{' '}
+            <a
+              href='https://www.discovermoab.com/'
+              className='text-secondary-400 cursor-pointer font-bold'
+            >
+              here
+            </a>{' '}
+            to go to the Moab tourism website.
+          </p>
         </div>
       </div>
     </Container>
