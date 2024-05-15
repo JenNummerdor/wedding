@@ -21,8 +21,10 @@ export default function Page() {
             Click Here
           </button>
         </a>
-        <p className='text-base sm:text-md md:text-lg lg:text-xl'>
-          Please RSVP by May 1, 2024.
+        <p className='text-base sm:text-md md:text-lg lg:text-xl max-w-2xl'>
+          Please RSVP ASAP. We will not be accepting responses after June 1st,
+          2024. Unfortunately, if you do not RSVP by this time, we cannot
+          guarantee a meal for you.
         </p>
         <Image
           className='w-full h-full max-w-md m-8 rounded-xl'

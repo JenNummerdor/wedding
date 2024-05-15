@@ -2,6 +2,11 @@
 import { Container } from '@/app/components/container';
 import { Accordion, AccordionItem } from '@nextui-org/react';
 
+const COCKTAIL_ATTIRE_LINK =
+  'https://www.theknot.com/content/cocktail-wedding-attire';
+const SEMI_FORMAL_ATTIRE_LINK =
+  'https://www.theknot.com/content/what-to-wear-semi-formal';
+
 export default function Page() {
   return (
     <Container title='FAQ'>
@@ -12,11 +17,9 @@ export default function Page() {
           title='Am I allowed to bring a plus one?'
         >
           <div className='text-sm'>
-            Right now, no, unless you have received explit permission. The plus
-            one policy is in place to ensure that we can provide a fantastic
-            night for everyone due to space/cost limitations. We are open to
-            loosening this policy once we have a better idea of the RSVP count.
-            Please reach out to us directly if you have any questions.
+            Yes! We originally were not allowing plus ones due to space, but we
+            have got tons of room to spare now. Please make sure to include them
+            in the RSVP.
           </div>
         </AccordionItem>
         <AccordionItem
@@ -25,9 +28,9 @@ export default function Page() {
           title='Are kids welcome?'
         >
           <div className='text-sm'>
-            Absolutely! Kids under 18 who are living with you are welcome.
-            Please make sure to include them in the RSVP. There&apos;s even a
-            small playground on site.
+            Absolutely! Kids under 18 who are living with you are welcome. If
+            you are unsure, please ask! Please make sure to include them in the
+            RSVP. There&apos;s even a small playground on site.
           </div>
         </AccordionItem>
         <AccordionItem
@@ -64,9 +67,30 @@ export default function Page() {
         >
           <div className='text-sm'>
             This wedding is taking place outside on a ranch in the mountains.
-            Feel free to dress-to-impress, but don&apos;t be afraid to choose
-            sensible clothing. The night may be cool, and you will have to walk
-            on some grass if you&apos;re attending the ceremony.
+            The night may be cool, and you will have to walk on some grass if
+            you&apos;re attending the ceremony, so we do not recommend wearing
+            stilettos, unless you want to aerate the lawn. The dress code we
+            recommend falls under cocktail to semi-formal attire. You can read
+            more about{' '}
+            <a
+              href={COCKTAIL_ATTIRE_LINK}
+              className='text-primary-400 font-bold'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              cocktail attire here
+            </a>
+            , and
+            <a
+              href={SEMI_FORMAL_ATTIRE_LINK}
+              className='text-primary-400 font-bold'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              {' '}
+              semi-formal attire here
+            </a>
+            .
           </div>
         </AccordionItem>
         <AccordionItem
@@ -101,11 +125,13 @@ export default function Page() {
             Thin! We&apos;re getting married in the mountains!
             <br />
             <br />
-            This wedding will be an eclectic mix of friends old and new, and
-            family from all over. This will be relaxed, fun and maybe slightly
-            silly. We will be at the ranch from Friday to Sunday, so there will
-            be plenty of time to catch up with old friends and make new ones.
-            You never know who you might meet!
+            All joking aside, this wedding will be an eclectic mix of friends
+            old and new and family from all over. We are counting on less than
+            100 people at the time that this is written, which is around the
+            middle of May. This will be relaxed, fun and maybe slightly silly.
+            We will be at the ranch from Friday to Sunday, so there will be
+            plenty of time to catch up with old friends and make new ones. You
+            never know who you might meet!
           </div>
         </AccordionItem>
         <AccordionItem
@@ -118,6 +144,21 @@ export default function Page() {
             liquor laws. Fortunately, this wedding venue is considered private
             property! We will be providing beer, wine, and a signature cocktail
             (or two) for the night.
+          </div>
+        </AccordionItem>
+        <AccordionItem
+          key='10'
+          aria-label='How will I know where I am staying?'
+          title='How will I know where I am staying?'
+        >
+          <div className='text-sm'>
+            The cabins at Whispering Oaks are limited, so we have assigned a
+            cabin to people who are immediate family or part of the wedding
+            party as first priority. The cabins are not free. We will be sending
+            out an email with hotel blocks or cabin assignment by the end of
+            May. Please note that we really wish everyone could stay in the
+            cabins, but the hotel that we have partnered with is also a great
+            place to be!
           </div>
         </AccordionItem>
       </Accordion>
