@@ -25,8 +25,8 @@ export default function Page() {
             <Event
               name='Wedding Ceremony'
               location='Pavilion'
-              start='2 PM'
-              end='3 PM'
+              start='3:30 PM'
+              end='4 PM'
             />
             <Event
               name='Reception'
