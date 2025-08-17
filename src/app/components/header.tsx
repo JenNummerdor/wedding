@@ -30,6 +30,10 @@ const menu = [
     title: 'Registry',
   },
   {
+    href: '/photos',
+    title: 'Photos',
+  },
+  {
     href: '/faq',
     title: 'FAQ',
   },
