@@ -104,7 +104,7 @@ module.exports = {
             /* Set page text color */
             foreground: palette.text['800'],
             /* Set page background color */
-            background: palette.background['950'],
+            background: palette.background['50'],
             /* Set layout divider color */
             divider: palette.primary['500'],
             /* Set layout focus color */

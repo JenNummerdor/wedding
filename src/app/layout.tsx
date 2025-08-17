@@ -20,9 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body
-        className={`${inter.className} wedding-light text-foreground bg-background`}
-      >
+      <body className={`${inter.className} wedding-light text-foreground bg-background`}>
         <Providers>
           <Header />
           <main className={styles.main}>{children}</main>
