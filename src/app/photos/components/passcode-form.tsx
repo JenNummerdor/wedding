@@ -5,13 +5,13 @@ import { Button, Input } from '@nextui-org/react';
 import { verifyPasscode } from '../actions';
 
 interface PasscodeFormProps {
-  onSuccess: (albumLink: string) => void;
+  onSuccess: (embedHtml: string) => void;
 }
 
 /// <summary>
 /// Component that renders a passcode input form for accessing the photos album
 /// </summary>
-/// <param name="onSuccess">Callback function called when passcode is successfully verified</param>
+/// <param name="onSuccess">Callback function called when passcode is successfully verified with embed HTML</param>
 export function PasscodeForm({ onSuccess }: PasscodeFormProps) {
   const [passcode, setPasscode] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -28,8 +28,8 @@ export function PasscodeForm({ onSuccess }: PasscodeFormProps) {
     try {
       const result = await verifyPasscode(passcode);
       
-      if (result.success && result.albumLink) {
-        onSuccess(result.albumLink);
+      if (result.success && result.embedHtml) {
+        onSuccess(result.embedHtml);
       } else {
         setError(result.error || 'Invalid passcode');
       }

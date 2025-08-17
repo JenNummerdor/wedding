@@ -3,50 +3,39 @@
 import { useState } from 'react';
 import { Container } from '@/app/components/container';
 import { PasscodeForm } from './components/passcode-form';
-import { Button, Link } from '@nextui-org/react';
 
 /// <summary>
-/// Photos page component that displays a passcode form and reveals Google Photos album link after verification
+/// Photos page component that displays a passcode form and reveals Flickr album embed after verification
 /// </summary>
 export default function Page() {
-  const [albumLink, setAlbumLink] = useState<string | null>(null);
+  const [embedHtml, setEmbedHtml] = useState<string | null>(null);
 
   /// <summary>
-  /// Handles successful passcode verification by storing the album link
+  /// Handles successful passcode verification by storing the embed HTML
   /// </summary>
-  /// <param name="link">The Google Photos album link to display</param>
-  const handlePasscodeSuccess = (link: string) => {
-    setAlbumLink(link);
+  /// <param name="html">The Flickr embed HTML to display</param>
+  const handlePasscodeSuccess = (html: string) => {
+    setEmbedHtml(html);
   };
 
-
   return (
-    <Container title='Photos'>
-      <div className='flex justify-center items-center min-h-[400px]'>
-        {!albumLink ? (
-          <PasscodeForm onSuccess={handlePasscodeSuccess} />
-        ) : (
-          <div className="text-center space-y-6 max-w-md mx-auto">
-            <div>
-              <h2 className="text-2xl font-semibold mb-2">Wedding Photos</h2>
-              <p className="text-gray-600 mb-4">
-                Click the link below to view our wedding album on Google Photos
-              </p>
-            </div>
-            
-            <Button
-              as={Link}
-              href={albumLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              size="lg"
-              className="w-full bg-foreground text-white"
-            >
-              View Wedding Album
-            </Button>
+    <>
+      {!embedHtml ? (
+        <Container title='Photos'>
+          <div className='flex justify-center items-center min-h-[400px]'>
+            <PasscodeForm onSuccess={handlePasscodeSuccess} />
           </div>
-        )}
-      </div>
-    </Container>
+        </Container>
+      ) : (
+        <div className="container mx-auto max-w-5xl mb-8">
+          <div className="flex justify-center items-center min-h-screen">
+            <div 
+              className="w-full"
+              dangerouslySetInnerHTML={{ __html: embedHtml }}
+            />
+          </div>
+        </div>
+      )}
+    </>
   );
 }
