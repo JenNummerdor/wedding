@@ -27,8 +27,8 @@ export default function Page() {
           </div>
         </Container>
       ) : (
-        <div className="container mx-auto max-w-5xl mb-8">
-          <div className="flex justify-center items-center min-h-screen">
+        <div className="flex justify-center items-center min-h-screen px-4">
+          <div className="w-full max-w-5xl mx-auto">
             <div 
               className="w-full"
               dangerouslySetInnerHTML={{ __html: embedHtml }}
