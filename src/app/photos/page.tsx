@@ -22,7 +22,7 @@ export default function Page() {
     <>
       {!embedHtml ? (
         <Container title='Photos'>
-          <div className='flex justify-center items-center min-h-[400px]'>
+          <div className='flex justify-center items-center'>
             <PasscodeForm onSuccess={handlePasscodeSuccess} />
           </div>
         </Container>

@@ -17,44 +17,13 @@ export function PasscodeForm({ onSuccess }: PasscodeFormProps) {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
   const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
+  const justClearedRef = useRef<number | null>(null);
 
   /// <summary>
-  /// Handles input change for individual digit inputs
+  /// Submits the passcode for verification
   /// </summary>
-  /// <param name="index">The index of the input being changed</param>
-  /// <param name="value">The new value for the input</param>
-  const handleInputChange = (index: number, value: string) => {
-    if (!/^\d*$/.test(value)) return; // Only allow digits
-    
-    const newPasscode = [...passcode];
-    newPasscode[index] = value.slice(-1); // Only take the last character
-    setPasscode(newPasscode);
-    setError('');
-
-    // Auto-focus next input
-    if (value && index < 5) {
-      inputRefs.current[index + 1]?.focus();
-    }
-  };
-
-  /// <summary>
-  /// Handles key down events for navigation and deletion
-  /// </summary>
-  /// <param name="index">The index of the input</param>
-  /// <param name="e">The keyboard event</param>
-  const handleKeyDown = (index: number, e: React.KeyboardEvent) => {
-    if (e.key === 'Backspace' && !passcode[index] && index > 0) {
-      inputRefs.current[index - 1]?.focus();
-    }
-  };
-
-  /// <summary>
-  /// Handles form submission and passcode verification
-  /// </summary>
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    const fullPasscode = passcode.join('');
-    
+  /// <param name="fullPasscode">The complete 6-digit passcode</param>
+  const submitPasscode = async (fullPasscode: string) => {
     if (fullPasscode.length !== 6) {
       setError('Please enter all 6 digits');
       return;
@@ -78,6 +47,74 @@ export function PasscodeForm({ onSuccess }: PasscodeFormProps) {
     }
   };
 
+  /// <summary>
+  /// Handles input change for individual digit inputs
+  /// </summary>
+  /// <param name="index">The index of the input being changed</param>
+  /// <param name="value">The new value for the input</param>
+  const handleInputChange = (index: number, value: string) => {
+    if (!/^\d*$/.test(value)) return; // Only allow digits
+    
+    const newPasscode = [...passcode];
+    newPasscode[index] = value.slice(-1); // Only take the last character
+    setPasscode(newPasscode);
+    setError('');
+
+    // Check if this input was just cleared - if so, don't auto-advance
+    const wasJustCleared = justClearedRef.current === index;
+    if (wasJustCleared) {
+      justClearedRef.current = null; // Reset the flag
+    }
+
+    // Auto-focus next input (only if we didn't just clear this input)
+    if (value && index < 5 && !wasJustCleared) {
+      inputRefs.current[index + 1]?.focus();
+    }
+
+    // Auto-submit when all digits are filled
+    if (value && index === 5) {
+      const fullPasscode = newPasscode.join('');
+      if (fullPasscode.length === 6) {
+        setTimeout(() => submitPasscode(fullPasscode), 100);
+      }
+    }
+  };
+
+  /// <summary>
+  /// Handles key down events for navigation and deletion
+  /// </summary>
+  /// <param name="index">The index of the input</param>
+  /// <param name="e">The keyboard event</param>
+  const handleKeyDown = (index: number, e: React.KeyboardEvent) => {
+    if (e.key === 'Backspace' && !passcode[index] && index > 0) {
+      inputRefs.current[index - 1]?.focus();
+    }
+  };
+
+  /// <summary>
+  /// Handles focus events to auto-clear the input for easier editing
+  /// </summary>
+  /// <param name="index">The index of the input being focused</param>
+  const handleFocus = (index: number) => {
+    if (passcode[index]) {
+      const newPasscode = [...passcode];
+      newPasscode[index] = '';
+      setPasscode(newPasscode);
+      setError('');
+      // Mark this input as just cleared to prevent auto-advance on next input
+      justClearedRef.current = index;
+    }
+  };
+
+  /// <summary>
+  /// Handles form submission and passcode verification
+  /// </summary>
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const fullPasscode = passcode.join('');
+    await submitPasscode(fullPasscode);
+  };
+
   return (
     <div className="flex flex-col items-center justify-center space-y-6 max-w-md mx-auto">
       <div className="text-center">
@@ -99,6 +136,7 @@ export function PasscodeForm({ onSuccess }: PasscodeFormProps) {
               value={digit}
               onChange={(e) => handleInputChange(index, e.target.value)}
               onKeyDown={(e) => handleKeyDown(index, e)}
+              onFocus={() => handleFocus(index)}
               className="w-12 h-12 text-center text-xl font-semibold border-2 border-gray-300 rounded-lg focus:border-primary-500 focus:outline-none"
             />
           ))}
@@ -110,12 +148,10 @@ export function PasscodeForm({ onSuccess }: PasscodeFormProps) {
         
         <Button
           type="submit"
-          color="primary"
           isLoading={isLoading}
-          disabled={passcode.join('').length !== 6}
-          className="w-full"
+          className="w-full bg-foreground text-white h-12"
         >
-          Access Photos
+          Take me to photos
         </Button>
       </form>
     </div>
